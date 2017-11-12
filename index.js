@@ -25,6 +25,12 @@ fetch( "https://api.github.com/repos/jbjw/hardware-sandbox/stats/contributors" )
 			div.style.backgroundColor = utils.chooseColor()
 			// div.style.backgroundColor = `rgba(${200}, ${100}, ${0}, ${0.5})`
 			root.appendChild(div)
+			div.addEventListener( "click", function (e) {
+				// console.log(root)
+				// console.log(div)
+				root.removeChild(e.target)
+			} )
+
 			// document.body.appendChild(div)
 
 			var dateP = document.createElement("p")
